@@ -36,6 +36,9 @@
   <style>
     :root {
       --line: rgba(255, 255, 255, 0.08);
+      --surface: rgba(15, 23, 42, 0.72);
+      --surface-strong: rgba(15, 23, 42, 0.92);
+      --stroke: rgba(255, 255, 255, 0.14);
     }
 
     .mesh-bg {
@@ -67,6 +70,22 @@
       box-shadow: 0 24px 60px rgba(6, 182, 212, 0.15);
     }
 
+    .glass-card {
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.65), var(--surface));
+      border: 1px solid var(--stroke);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 28px rgba(2, 8, 23, 0.25);
+    }
+
+    .section-title {
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .soft-ring {
+      box-shadow: 0 0 0 1px rgba(207, 250, 254, 0.1), 0 22px 60px rgba(6, 182, 212, 0.12);
+    }
+
     .shimmer::after {
       content: "";
       position: absolute;
@@ -87,10 +106,19 @@
         transform: translateX(140%);
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .project-card,
+      .shimmer::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
   </style>
 </head>
 
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500/30">
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-brand-500/30">
   <div class="fixed left-0 top-0 z-[60] h-1 w-full bg-transparent">
     <div id="scroll-progress" class="h-full w-0 bg-gradient-to-r from-brand-100 via-brand-500 to-sky-400"></div>
   </div>
@@ -100,9 +128,9 @@
     <div class="mesh-bg absolute inset-0"></div>
   </div>
 
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 shadow-lg shadow-slate-950/40 backdrop-blur-xl">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-      <a href="#home" class="text-lg font-extrabold tracking-wide text-white">OMEGASL</a>
+      <a href="#home" class="text-lg font-extrabold tracking-[0.2em] text-white">OMEGASL</a>
       <ul class="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
         <li><a href="#about" class="transition hover:text-brand-100">About</a></li>
         <li><a href="#experience" class="transition hover:text-brand-100">Experience</a></li>
@@ -132,12 +160,12 @@
 
   <main>
     <section id="home"
-      class="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-16 md:grid-cols-2 md:items-center md:px-8 md:pt-24">
+      class="mx-auto grid max-w-6xl gap-12 px-5 pb-24 pt-16 md:grid-cols-2 md:items-center md:px-8 md:pt-28">
       <div class="reveal">
         <p
           class="mb-4 inline-block rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-100">
           Available for work</p>
-        <h1 class="text-4xl font-extrabold leading-tight text-white md:text-6xl">Favour Nwevo</h1>
+        <h1 class="section-title text-5xl font-extrabold leading-[1.02] text-white md:text-7xl">Favour <span class="bg-gradient-to-r from-brand-100 via-white to-brand-100 bg-clip-text text-transparent">Nwevo</span></h1>
         <p class="mt-4 text-xl font-semibold text-brand-100 md:text-2xl">Full-Stack Developer</p>
         <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">Full-Stack Developer based in
           Ghana, building scalable products across healthcare, commerce, and business operations with Laravel, Livewire,
@@ -151,15 +179,15 @@
             Portfolio</a>
         </div>
         <div class="mt-8 grid grid-cols-3 gap-3">
-          <div class="rounded-xl border border-white/10 bg-slate-900/70 p-3">
+          <div class="glass-card rounded-xl p-3">
             <p class="text-xl font-extrabold text-white"><span class="count" data-target="5">0</span>+</p>
             <p class="text-xs uppercase tracking-wider text-slate-300">Years Building</p>
           </div>
-          <div class="rounded-xl border border-white/10 bg-slate-900/70 p-3">
+          <div class="glass-card rounded-xl p-3">
             <p class="text-xl font-extrabold text-white"><span class="count" data-target="3">0</span>+</p>
             <p class="text-xs uppercase tracking-wider text-slate-300">Core Domains</p>
           </div>
-          <div class="rounded-xl border border-white/10 bg-slate-900/70 p-3">
+          <div class="glass-card rounded-xl p-3">
             <p class="text-xl font-extrabold text-white"><span class="count" data-target="6">0</span>+</p>
             <p class="text-xs uppercase tracking-wider text-slate-300">Major Roles</p>
           </div>
@@ -168,29 +196,29 @@
       <div class="relative reveal">
         <div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-brand-500/40 to-sky-400/30 blur-xl"></div>
         <div
-          class="shimmer relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-3 shadow-2xl shadow-brand-900/30">
+          class="shimmer soft-ring relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-3 shadow-2xl shadow-brand-900/30">
           <img src="img/mine/me.webp" alt="Favour Nwevo"
             class="h-[420px] w-full rounded-2xl object-cover object-top md:h-[460px]" />
         </div>
       </div>
     </section>
 
-    <section id="about" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
+    <section id="about" class="mx-auto max-w-6xl px-5 pb-24 md:px-8 reveal">
       <div class="grid gap-6 md:grid-cols-4">
-        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:col-span-2">
-          <h2 class="text-2xl font-bold text-white">Professional Summary</h2>
+        <article class="glass-card rounded-2xl p-6 md:col-span-2">
+          <h2 class="section-title text-2xl font-bold text-white">Professional Summary</h2>
           <p class="mt-4 leading-relaxed text-slate-300">I design and build scalable digital systems that solve real
             business problems. My focus is clean architecture, practical automation, and reliable user-facing products
             across healthcare, commerce, and enterprise workflows.</p>
         </article>
-        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+        <article class="glass-card rounded-2xl p-6">
           <p class="text-sm uppercase tracking-wider text-brand-100">Location</p>
           <p class="mt-2 text-lg font-semibold text-white">Koforidua, Ghana</p>
           <p class="mt-4 text-sm uppercase tracking-wider text-brand-100">Email</p>
           <a class="mt-2 block text-lg font-semibold text-white hover:text-brand-100"
             href="mailto:favournwevo@gmail.com">favournwevo@gmail.com</a>
         </article>
-        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+        <article class="glass-card rounded-2xl p-6">
           <p class="text-sm uppercase tracking-wider text-brand-100">Phone</p>
           <a class="mt-2 block text-lg font-semibold text-white hover:text-brand-100" href="tel:+233248429877">(+233) 24
             842 9877</a>
@@ -200,49 +228,49 @@
       </div>
     </section>
 
-    <section id="experience" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
+    <section id="experience" class="mx-auto max-w-6xl px-5 pb-24 md:px-8 reveal">
       <div class="mb-8 flex items-end justify-between gap-4">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Career</p>
-          <h2 class="mt-2 text-3xl font-extrabold text-white">Experience & Education</h2>
+          <h2 class="section-title mt-2 text-3xl font-extrabold text-white">Experience & Education</h2>
         </div>
       </div>
 
       <div class="grid gap-6 lg:grid-cols-2">
-        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+        <article class="glass-card rounded-2xl p-6">
           <h3 class="text-xl font-bold text-white">Experience</h3>
           <div class="mt-6 space-y-5">
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">Jul 2023 - Present</p>
               <h4 class="mt-1 font-bold text-white">Full Stack Software Developer · RX Health Info Systems</h4>
               <p class="mt-2 text-sm text-slate-300">Developing and maintaining Laravel and Livewire applications with
                 Alpine.js for production healthcare workflows.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">Jul 2025 - Feb 2026</p>
               <h4 class="mt-1 font-bold text-white">ReactJS Developer · WAAWOLO TECHNOLOGIES</h4>
               <p class="mt-2 text-sm text-slate-300">Built responsive commerce interfaces and frontend application flows
                 with React.js and Tailwind CSS.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">Nov 2023 - Sep 2025</p>
               <h4 class="mt-1 font-bold text-white">Laravel Developer · AppNet Consult LTD</h4>
               <p class="mt-2 text-sm text-slate-300">Implemented hostel reservation, booking, payment, and communication
                 workflows for tertiary institutions in Ghana.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">Apr 2025 - Jul 2025</p>
               <h4 class="mt-1 font-bold text-white">Full Stack Developer · Microma Services</h4>
               <p class="mt-2 text-sm text-slate-300">Delivered end-to-end web features across frontend interfaces, APIs,
                 reporting, and business automation.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">Mar 2023 - Jun 2023</p>
               <h4 class="mt-1 font-bold text-white">Laravel Developer · Zelus Technologies Limited</h4>
               <p class="mt-2 text-sm text-slate-300">Built dashboards, landing pages, and web applications using
                 Laravel, Livewire, and Alpine.js.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">Aug 2021 - Mar 2023</p>
               <h4 class="mt-1 font-bold text-white">Full Stack Engineer · LinkedIn</h4>
               <p class="mt-2 text-sm text-slate-300">Contributed to full-stack product delivery with a focus on
@@ -251,14 +279,14 @@
           </div>
         </article>
 
-        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+        <article class="glass-card rounded-2xl p-6">
           <h3 class="text-xl font-bold text-white">Education & Skills</h3>
           <div class="mt-6 space-y-5">
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">2020 - 2023</p>
               <h4 class="mt-1 font-bold text-white">BSc. Computer Science · Valley View University</h4>
             </div>
-            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+            <div class="rounded-xl border border-white/10 bg-slate-900/80 p-4">
               <p class="text-sm text-brand-100">2015 - 2019</p>
               <h4 class="mt-1 font-bold text-white">HND Computer Science · Koforidua Technical University</h4>
             </div>
@@ -267,35 +295,35 @@
                 <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">Laravel /
                     Livewire</span><span class="text-brand-100">93%</span></div>
                 <div class="h-2 rounded bg-slate-800">
-                  <div class="h-2 rounded bg-brand-500" style="width:93%"></div>
+                  <div class="h-2 rounded bg-gradient-to-r from-brand-500 to-sky-400" style="width:93%"></div>
                 </div>
               </div>
               <div>
                 <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">React.js</span><span
                     class="text-brand-100">88%</span></div>
                 <div class="h-2 rounded bg-slate-800">
-                  <div class="h-2 rounded bg-brand-500" style="width:88%"></div>
+                  <div class="h-2 rounded bg-gradient-to-r from-brand-500 to-sky-400" style="width:88%"></div>
                 </div>
               </div>
               <div>
                 <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">Tailwind CSS</span><span
                     class="text-brand-100">90%</span></div>
                 <div class="h-2 rounded bg-slate-800">
-                  <div class="h-2 rounded bg-brand-500" style="width:90%"></div>
+                  <div class="h-2 rounded bg-gradient-to-r from-brand-500 to-sky-400" style="width:90%"></div>
                 </div>
               </div>
               <div>
                 <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">Alpine.js</span><span
                     class="text-brand-100">86%</span></div>
                 <div class="h-2 rounded bg-slate-800">
-                  <div class="h-2 rounded bg-brand-500" style="width:86%"></div>
+                  <div class="h-2 rounded bg-gradient-to-r from-brand-500 to-sky-400" style="width:86%"></div>
                 </div>
               </div>
               <div>
                 <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">MySQL</span><span
                     class="text-brand-100">84%</span></div>
                 <div class="h-2 rounded bg-slate-800">
-                  <div class="h-2 rounded bg-brand-500" style="width:84%"></div>
+                  <div class="h-2 rounded bg-gradient-to-r from-brand-500 to-sky-400" style="width:84%"></div>
                 </div>
               </div>
             </div>
@@ -304,16 +332,16 @@
       </div>
     </section>
 
-    <section id="portfolio" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
+    <section id="portfolio" class="mx-auto max-w-6xl px-5 pb-24 md:px-8 reveal">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Selected Work</p>
-        <h2 class="mt-2 text-3xl font-extrabold text-white">Featured Projects</h2>
+        <h2 class="section-title mt-2 text-3xl font-extrabold text-white">Featured Projects</h2>
         <p class="mt-3 max-w-3xl text-slate-300">Selected projects across commerce, education technology, and healthcare
           systems, focused on scalable architecture and practical user workflows.</p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-3">
-        <article class="project-card overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+        <article class="project-card glass-card overflow-hidden rounded-2xl">
           <img src="img/portfolio/healthcare-operations-platform.png" alt="Healthcare Operations Platform"
             class="h-56 w-full object-cover" />
           <div class="p-6">
@@ -324,7 +352,7 @@
             <p class="mt-3 text-xs text-slate-400">Built with Laravel, Livewire, Alpine.js, MySQL</p>
           </div>
         </article>
-        <article class="project-card overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+        <article class="project-card glass-card overflow-hidden rounded-2xl">
           <img src="img/portfolio/student-room-book.png" alt="Student Room Book" class="h-56 w-full object-cover" />
           <div class="p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Core Services</p>
@@ -335,7 +363,7 @@
             <p class="mt-3 text-xs text-slate-400">Built with Laravel, Livewire, Alpine.js, Bootstrap</p>
           </div>
         </article>
-        <article class="project-card overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+        <article class="project-card glass-card overflow-hidden rounded-2xl">
           <img src="img/portfolio/wynx-multi-vendor.png" alt="WYNX - Multi Vendor Commerce Platform"
             class="h-56 w-full object-cover" />
           <div class="p-6">
@@ -350,11 +378,11 @@
       </div>
     </section>
 
-    <section id="contact" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
+    <section id="contact" class="mx-auto max-w-6xl px-5 pb-24 md:px-8 reveal">
       <div class="grid gap-6 lg:grid-cols-3">
-        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 lg:col-span-2">
+        <article class="glass-card rounded-2xl p-6 lg:col-span-2">
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Let us work together</p>
-          <h2 class="mt-2 text-3xl font-extrabold text-white">Contact</h2>
+          <h2 class="section-title mt-2 text-3xl font-extrabold text-white">Contact</h2>
           <p class="mt-4 max-w-2xl text-slate-300">Interested in building a reliable web product or improving an
             existing one? Reach out and let us discuss your project goals.</p>
 
@@ -371,7 +399,7 @@
           </div>
         </article>
 
-        <aside class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+        <aside class="glass-card rounded-2xl p-6">
           <h3 class="text-lg font-bold text-white">Social Links</h3>
           <ul class="mt-4 space-y-3 text-sm text-slate-300">
             <li><a class="transition hover:text-brand-100" target="_blank" rel="noopener noreferrer"
@@ -398,6 +426,11 @@
     </div>
   </footer>
 
+  <button id="scroll-top" aria-label="Scroll to top"
+    class="pointer-events-none fixed bottom-6 right-6 z-[70] inline-flex h-12 w-12 translate-y-3 items-center justify-center rounded-full border border-white/20 bg-slate-900/90 text-white opacity-0 shadow-xl shadow-slate-950/50 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-brand-100 hover:text-brand-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
+    <span class="text-xl leading-none">↑</span>
+  </button>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -411,15 +444,24 @@
     });
 
     const progress = document.getElementById("scroll-progress");
+    const scrollTopBtn = document.getElementById("scroll-top");
     const updateScrollProgress = () => {
       const doc = document.documentElement;
       const scrollTop = doc.scrollTop || document.body.scrollTop;
       const scrollHeight = doc.scrollHeight - doc.clientHeight;
       const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
       progress.style.width = pct + "%";
+
+      const showTopBtn = scrollTop > 420;
+      scrollTopBtn.classList.toggle("opacity-0", !showTopBtn);
+      scrollTopBtn.classList.toggle("translate-y-3", !showTopBtn);
+      scrollTopBtn.classList.toggle("pointer-events-none", !showTopBtn);
     };
     window.addEventListener("scroll", updateScrollProgress, { passive: true });
     updateScrollProgress();
+    scrollTopBtn?.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
