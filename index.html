@@ -1,1267 +1,255 @@
-<!DOCTYPE html>
-
+<!doctype html>
+<html lang="en">
 <head>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<meta name="description" content="OmegaSL Programming">
-	<meta name="author" content="OmegaSL">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<title>OmegaSL Portfolio | Home</title>
-
-	<!-- Google Fonts -->
-
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-
-	<!-- /Google Fonts -->
-
-	<!-- Styles -->
-	<link type="text/css" rel="stylesheet" href="css/base.css" />
-	<link type="text/css" rel="stylesheet" href="css/animate.css" />
-	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl-carousel.css" />
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-	<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
-	<!-- /Styles -->
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OmegaSL portfolio for Favour Nwevo, Full-Stack Developer." />
+  <meta name="author" content="OmegaSL" />
+  <title>OmegaSL Portfolio | Favour Nwevo</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Manrope", "sans-serif"]
+          },
+          colors: {
+            brand: {
+              50: "#ecfeff",
+              100: "#cffafe",
+              500: "#06b6d4",
+              600: "#0891b2",
+              700: "#0e7490"
+            }
+          }
+        }
+      }
+    };
+  </script>
 </head>
-
-<body>
-	<!-- Wrapper All -->
-	<div class="rewall_fn_wrapper_all" data-nav-skin="transdark">
-
-		<!-- Wrapper -->
-		<div class="rewall_fn_wrapper">
-
-
-			<div class="rewall_fn_mobilemenu_wrap">
-
-				<!-- LOGO & HAMBURGER -->
-				<div class="logo_hamb">
-					<div class="in">
-						<div class="menu_logo">
-							<a href="index.html"><img src="img/logo-light.png" alt="" /></a>
-						</div>
-						<div class="hamburger hamburger--collapse-r">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /LOGO & HAMBURGER -->
-				<!-- MOBILE DROPDOWN MENU -->
-				<div class="mobilemenu">
-					<div>
-						<ul class="anchor_nav vert_menu_list">
-							<li class="current"><a href="#about">Home</a></li>
-							<li><a href="#biography">Biography</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<!-- <li><a href="#service">Services</a></li> -->
-							<!-- <li><a href="#customer">Customers</a></li> -->
-							<!-- <li><a href="#blog">News &amp; Tips</a></li> -->
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- /MOBILE DROPDOWN MENU -->
-			</div>
-
-
-			<!-- Color Scheme -->
-			<!-- <div class="rewall_fn_color_scheme">
-			<a class="opener" href="#">
-				<img src="svg/color.svg" alt="" class="fn__svg" />
-			</a>
-			<div class="color_box">
-				<a href="#" class="closer">
-					<img src="svg/cancel.svg" alt="" class="fn__svg" />
-				</a>
-				<ul>
-					<li class="item">
-						<h5>Online clothing store</h5>
-						<ul>
-							<li><a href="#" data-color="#5d6e99"></a></li>
-							<li><a href="#" data-color="#b18780"></a></li>
-							<li><a href="#" data-color="#605e2d"></a></li>
-							<li><a href="#" data-color="#7c554e"></a></li>
-							<li><a href="#" data-color="#f4988b"></a></li>
-							<li><a href="#" data-color="#dfc1b6"></a></li>
-							<li><a href="#" data-color="#c77fb1"></a></li>
-							<li><a href="#" data-color="#a9aa71"></a></li>
-							<li><a href="#" data-color="#96939c"></a></li>
-							<li><a href="#" data-color="#f36b51"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Website for women's clothing, accessories and jewelry store</h5>
-						<ul>
-							<li><a href="#" data-color="#3e1c1d"></a></li>
-							<li><a href="#" data-color="#694141"></a></li>
-							<li><a href="#" data-color="#532c27"></a></li>
-							<li><a href="#" data-color="#7b5650"></a></li>
-							<li><a href="#" data-color="#2d1012"></a></li>
-							<li><a href="#" data-color="#92665d"></a></li>
-							<li><a href="#" data-color="#a9806e"></a></li>
-							<li><a href="#" data-color="#c29d83"></a></li>
-							<li><a href="#" data-color="#710e3d"></a></li>
-							<li><a href="#" data-color="#96285b"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Wedding salon website</h5>
-						<ul>
-							<li><a href="#" data-color="#e397b1"></a></li>
-							<li><a href="#" data-color="#ce7d7a"></a></li>
-							<li><a href="#" data-color="#a58264"></a></li>
-							<li><a href="#" data-color="#600b28"></a></li>
-							<li><a href="#" data-color="#5e2c21"></a></li>
-							<li><a href="#" data-color="#e8d5c1"></a></li>
-							<li><a href="#" data-color="#3c0f12"></a></li>
-							<li><a href="#" data-color="#b47f77"></a></li>
-							<li><a href="#" data-color="#634352"></a></li>
-							<li><a href="#" data-color="#11131f"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Website on the topic of cars</h5>
-						<ul>
-							<li><a href="#" data-color="#0d0208"></a></li>
-							<li><a href="#" data-color="#170b19"></a></li>
-							<li><a href="#" data-color="#3a0f18"></a></li>
-							<li><a href="#" data-color="#661615"></a></li>
-							<li><a href="#" data-color="#181c39"></a></li>
-							<li><a href="#" data-color="#1a344f"></a></li>
-							<li><a href="#" data-color="#0d4d66"></a></li>
-							<li><a href="#" data-color="#09637e"></a></li>
-							<li><a href="#" data-color="#0b89a0"></a></li>
-							<li><a href="#" data-color="#0fa5c0"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Entertainment website</h5>
-						<ul>
-							<li><a href="#" data-color="#c851ad"></a></li>
-							<li><a href="#" data-color="#ac3a9c"></a></li>
-							<li><a href="#" data-color="#682374"></a></li>
-							<li><a href="#" data-color="#60226f"></a></li>
-							<li><a href="#" data-color="#7f78ac"></a></li>
-							<li><a href="#" data-color="#4c8ca8"></a></li>
-							<li><a href="#" data-color="#7354b1"></a></li>
-							<li><a href="#" data-color="#151a75"></a></li>
-							<li><a href="#" data-color="#4b1549"></a></li>
-							<li><a href="#" data-color="#2c0929"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Home Decor Shop</h5>
-						<ul>
-							<li><a href="#" data-color="#4f4232"></a></li>
-							<li><a href="#" data-color="#f3d9b6"></a></li>
-							<li><a href="#" data-color="#afc15d"></a></li>
-							<li><a href="#" data-color="#8e4c29"></a></li>
-							<li><a href="#" data-color="#250c08"></a></li>
-							<li><a href="#" data-color="#f6ba88"></a></li>
-							<li><a href="#" data-color="#f59e82"></a></li>
-							<li><a href="#" data-color="#421b0c"></a></li>
-							<li><a href="#" data-color="#af9a7d"></a></li>
-							<li><a href="#" data-color="#242408"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Photographer's site</h5>
-						<ul>
-							<li><a href="#" data-color="#673b28"></a></li>
-							<li><a href="#" data-color="#77482c"></a></li>
-							<li><a href="#" data-color="#49271e"></a></li>
-							<li><a href="#" data-color="#795d48"></a></li>
-							<li><a href="#" data-color="#916a41"></a></li>
-							<li><a href="#" data-color="#301615"></a></li>
-							<li><a href="#" data-color="#92785f"></a></li>
-							<li><a href="#" data-color="#dfd3d3"></a></li>
-							<li><a href="#" data-color="#c8b7af"></a></li>
-							<li><a href="#" data-color="#ae9883"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Sports website</h5>
-						<ul>
-							<li><a href="#" data-color="#12151a"></a></li>
-							<li><a href="#" data-color="#2b2219"></a></li>
-							<li><a href="#" data-color="#024387"></a></li>
-							<li><a href="#" data-color="#9fa792"></a></li>
-							<li><a href="#" data-color="#907608"></a></li>
-							<li><a href="#" data-color="#121e1a"></a></li>
-							<li><a href="#" data-color="#200f08"></a></li>
-							<li><a href="#" data-color="#730101"></a></li>
-							<li><a href="#" data-color="#574c1e"></a></li>
-							<li><a href="#" data-color="#3e3e36"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Restaurant website</h5>
-						<ul>
-							<li><a href="#" data-color="#e8c992"></a></li>
-							<li><a href="#" data-color="#dda742"></a></li>
-							<li><a href="#" data-color="#db901b"></a></li>
-							<li><a href="#" data-color="#e08f02"></a></li>
-							<li><a href="#" data-color="#c66507"></a></li>
-							<li><a href="#" data-color="#b07857"></a></li>
-							<li><a href="#" data-color="#aa2c05"></a></li>
-							<li><a href="#" data-color="#7d1d07"></a></li>
-							<li><a href="#" data-color="#450f03"></a></li>
-							<li><a href="#" data-color="#371001"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Real estate website</h5>
-						<ul>
-							<li><a href="#" data-color="#b97d47"></a></li>
-							<li><a href="#" data-color="#d5c697"></a></li>
-							<li><a href="#" data-color="#888365"></a></li>
-							<li><a href="#" data-color="#624a25"></a></li>
-							<li><a href="#" data-color="#a74c1d"></a></li>
-							<li><a href="#" data-color="#ef8b50"></a></li>
-							<li><a href="#" data-color="#9ca816"></a></li>
-							<li><a href="#" data-color="#7c8824"></a></li>
-							<li><a href="#" data-color="#596c10"></a></li>
-							<li><a href="#" data-color="#363112"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Medical website</h5>
-						<ul>
-							<li><a href="#" data-color="#0d0a11"></a></li>
-							<li><a href="#" data-color="#262431"></a></li>
-							<li><a href="#" data-color="#575c6f"></a></li>
-							<li><a href="#" data-color="#a7a7b1"></a></li>
-							<li><a href="#" data-color="#d7d1db"></a></li>
-							<li><a href="#" data-color="#babfd2"></a></li>
-							<li><a href="#" data-color="#a1b9d5"></a></li>
-							<li><a href="#" data-color="#869dd1"></a></li>
-							<li><a href="#" data-color="#5576ac"></a></li>
-							<li><a href="#" data-color="#133167"></a></li>
-							<li><a href="#" data-color="#132017"></a></li>
-							<li><a href="#" data-color="#1d8a6b"></a></li>
-							<li><a href="#" data-color="#4e7c60"></a></li>
-							<li><a href="#" data-color="#689a81"></a></li>
-							<li><a href="#" data-color="#255641"></a></li>
-							<li><a href="#" data-color="#97c8b3"></a></li>
-							<li><a href="#" data-color="#d5e0d0"></a></li>
-							<li><a href="#" data-color="#5a4b24"></a></li>
-							<li><a href="#" data-color="#4ab89d"></a></li>
-							<li><a href="#" data-color="#a18e63"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Travel agency website</h5>
-						<ul>
-							<li><a href="#" data-color="#e4e0dd"></a></li>
-							<li><a href="#" data-color="#1a9ca9"></a></li>
-							<li><a href="#" data-color="#e77992"></a></li>
-							<li><a href="#" data-color="#40333a"></a></li>
-							<li><a href="#" data-color="#97b6cb"></a></li>
-							<li><a href="#" data-color="#6388a2"></a></li>
-							<li><a href="#" data-color="#b1c1ce"></a></li>
-							<li><a href="#" data-color="#7bc8dc"></a></li>
-							<li><a href="#" data-color="#a5c3db"></a></li>
-							<li><a href="#" data-color="#57c2d4"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Business website</h5>
-						<ul>
-							<li><a href="#" data-color="#efb38e"></a></li>
-							<li><a href="#" data-color="#8a5d4a"></a></li>
-							<li><a href="#" data-color="#fef3d5"></a></li>
-							<li><a href="#" data-color="#9a563f"></a></li>
-							<li><a href="#" data-color="#aea5a0"></a></li>
-							<li><a href="#" data-color="#943014"></a></li>
-							<li><a href="#" data-color="#253d49"></a></li>
-							<li><a href="#" data-color="#48312b"></a></li>
-							<li><a href="#" data-color="#e5c7ad"></a></li>
-							<li><a href="#" data-color="#"></a></li>
-							<li><a href="#" data-color="#beb8ac"></a></li>
-							<li><a href="#" data-color="#697569"></a></li>
-							<li><a href="#" data-color="#203331"></a></li>
-							<li><a href="#" data-color="#b82921"></a></li>
-							<li><a href="#" data-color="#ee3834"></a></li>
-							<li><a href="#" data-color="#732c30"></a></li>
-							<li><a href="#" data-color="#050601"></a></li>
-							<li><a href="#" data-color="#3a261d"></a></li>
-							<li><a href="#" data-color="#746756"></a></li>
-							<li><a href="#" data-color="#8c7b71"></a></li>
-							<li><a href="#" data-color="#0f2936"></a></li>
-							<li><a href="#" data-color="#5b737f"></a></li>
-							<li><a href="#" data-color="#d1f3ff"></a></li>
-							<li><a href="#" data-color="#b3d3fc"></a></li>
-							<li><a href="#" data-color="#4870a3"></a></li>
-							<li><a href="#" data-color="#19375b"></a></li>
-							<li><a href="#" data-color="#142132"></a></li>
-							<li><a href="#" data-color="#020a17"></a></li>
-							<li><a href="#" data-color="#18192e"></a></li>
-							<li><a href="#" data-color="#333a57"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Lawyer website</h5>
-						<ul>
-							<li><a href="#" data-color="#948d95"></a></li>
-							<li><a href="#" data-color="#d2d2c6"></a></li>
-							<li><a href="#" data-color="#55566b"></a></li>
-							<li><a href="#" data-color="#8d98ac"></a></li>
-							<li><a href="#" data-color="#dfccbd"></a></li>
-							<li><a href="#" data-color="#6a5751"></a></li>
-							<li><a href="#" data-color="#40050b"></a></li>
-							<li><a href="#" data-color="#ebe8df"></a></li>
-							<li><a href="#" data-color="#50401e"></a></li>
-							<li><a href="#" data-color="#224622"></a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<h5>Online electronics store</h5>
-						<ul>
-							<li><a href="#" data-color="#d8ab2a"></a></li>
-							<li><a href="#" data-color="#e7b731"></a></li>
-							<li><a href="#" data-color="#cc9926"></a></li>
-							<li><a href="#" data-color="#1b140a"></a></li>
-							<li><a href="#" data-color="#875e32"></a></li>
-							<li><a href="#" data-color="#ebc443"></a></li>
-							<li><a href="#" data-color="#ac801d"></a></li>
-							<li><a href="#" data-color="#4e341b"></a></li>
-							<li><a href="#" data-color="#ac815e"></a></li>
-							<li><a href="#" data-color="#caa13d"></a></li>
-							<li><a href="#" data-color="#272027"></a></li>
-							<li><a href="#" data-color="#1d1419"></a></li>
-							<li><a href="#" data-color="#826583"></a></li>
-							<li><a href="#" data-color="#2f111b"></a></li>
-							<li><a href="#" data-color="#3e2137"></a></li>
-							<li><a href="#" data-color="#523e4a"></a></li>
-							<li><a href="#" data-color="#4d6895"></a></li>
-							<li><a href="#" data-color="#6ec9e4"></a></li>
-							<li><a href="#" data-color="#2d2f46"></a></li>
-							<li><a href="#" data-color="#334867"></a></li>
-						</ul>
-					</li>
-				</ul>
-				<div class="info">
-					<div class="current"></div>
-					<div class="separator"></div>
-					<div class="total"></div>
-				</div>
-				<div class="my__nav">
-					<a href="#" class="prev"><img src="svg/right-arrow.svg" alt="" class="fn__svg" /></a>
-					<a href="#" class="next"><img src="svg/right-arrow.svg" alt="" class="fn__svg" /></a>
-				</div>
-			</div>
-		</div> -->
-			<!-- /Color Scheme -->
-
-
-			<!-- Left Sidebar -->
-			<!-- You can set up minimum and maximum width for sidebar (in px). Minimum width is 350 -->
-			<div class="rewall_fn_sidebar" data-max="800" data-min="350">
-
-				<!-- Sidebar: Close Button -->
-				<a href="#" class="nav__button">
-					<span class="icon"><img src="svg/right-arrow.svg" alt="" class="fn__svg" /></span>
-					<span class="width_indicator"></span>
-				</a>
-				<!-- /Sidebar: Close Button -->
-
-				<!-- Sidebar: Line -->
-				<div class="nav_line"></div>
-				<!-- /Sidebar: Line -->
-
-				<!-- Sidebar: content -->
-				<div class="sidebar_in">
-					<div class="logo">
-						<a href="index.html">
-							<img src="img/logo.png" alt="" />
-						</a>
-					</div>
-					<div class="navigation">
-						<ul class="anchor_nav">
-							<li class="current"><a href="#about">Home</a></li>
-							<li><a href="#biography">Biography</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<!-- <li><a href="#service">Services</a></li>
-						<li><a href="#customer">Customers</a></li> -->
-							<!-- <li><a href="#blog">News &amp; Tips</a></li> -->
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</div>
-					<div class="copyright">
-						<div class="social">
-							<ul>
-								<li><a href="https://twitter.com/FavourNwevo" target="_blank">
-										<img src="svg/social/twitter.svg" alt="" class="fn__svg" />
-									</a></li>
-								<li><a href="https://facebook.com/favour.ogbonnaya.950" target="_blank">
-										<img src="svg/social/facebook.svg" alt="" class="fn__svg" />
-									</a></li>
-								<li><a href="https://www.instagram.com/ogbonnayafavour/" target="_blank">
-										<img src="svg/social/instagram.svg" alt="" class="fn__svg" />
-									</a></li>
-								<li><a href="https://www.linkedin.com/in/favour-nwevo-055017150/" target="_blank">
-										<img src="svg/social/linkedin.svg" alt="" class="fn__svg" />
-									</a></li>
-								<li><a href="https://www.youtube.com/channel/UCKS9rZyS3TjkcqoNSvlt1-w" target="_blank">
-										<img src="svg/social/youtube.svg" alt="" class="fn__svg" />
-									</a></li>
-							</ul>
-						</div>
-						<!-- <div class="desc">
-						<p>© 2022 Rewall Template<br />Created by <a href="https://frenify.com/" target="_blank">Frenify</a></p>
-					</div> -->
-					</div>
-				</div>
-				<!-- Sidebar: content -->
-
-			</div>
-			<!-- /Left Sidebar -->
-
-			<!-- Main Content -->
-			<div class="rewall_fn_content">
-				<div class="fn__page">
-
-
-					<!-- About Section -->
-					<section class="about" id="about">
-
-						<!-- About Modern Shortcode -->
-						<div class="fn_cs_about_modern">
-							<div class="container">
-								<div class="row">
-
-									<div class="left_part">
-										<div class="left_in" id="scene">
-											<div class="layer border" data-depth="0.2">
-												<span class="span1"></span>
-												<span class="span2"></span>
-												<img src="img/thumb/450-550.jpg" alt="">
-											</div>
-											<div class="img_holder layer" data-depth="0.3">
-												<img src="img/thumb/450-550.jpg" alt="">
-												<div class="abs_img" data-bg-img="img/mine/me.jpg"></div>
-											</div>
-											<div class="dots layer" data-switch="disable" data-depth="0.4">
-											</div>
-										</div>
-									</div>
-
-									<div class="right_part">
-
-										<!-- Main Title -->
-										<div class="main_title">
-											<h3>Fullstack Developer</h3>
-											<p>
-												A Full-Stack Software Developer based in Ghana. Currently working at
-												Rx Health Info Systems.
-											</p>
-											<!-- <img src="img/signature.png" alt="" /> -->
-										</div>
-										<!-- /Main Title -->
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<!-- About Modern Shortcode -->
-
-					</section>
-					<!-- /About Section -->
-
-
-					<!-- Scroll to next section -->
-					<div class="fn__next_section">
-						<div class="container"><span></span></div>
-						<a href="#">
-							<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
-							<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-						</a>
-					</div>
-					<!-- /Scroll to next section -->
-
-					<!-- Biography Section -->
-					<section class="biography" id="biography">
-
-						<!-- Main Title -->
-						<div class="main_title center">
-							<div class="container max880">
-								<h3>Biography</h3>
-								<p>
-									I'm a Full-Stack Software Developer based in Ghana. Currently working at Rx Health
-									Info Systems. I have a passion for web development and love to create for web and
-									mobile devices. I have a strong interest in learning new technologies and
-									programming languages. I am a fast learner and a team player.
-								</p>
-							</div>
-						</div>
-						<!-- /Main Title -->
-
-
-						<!-- Info Items -->
-						<div class="fn_cs_info_items">
-							<div class="container">
-								<div class="row">
-
-									<ul>
-										<li class="wow fadeInUp" data-wow-delay="0s">
-											<p>Name: <span>Favour Nwevo</span></p>
-										</li>
-										<li class="wow fadeInUp" data-wow-delay="0.15s">
-											<p>Birthday: <span>June 8, 1998</span></p>
-										</li>
-										<!-- <li class="wow fadeInUp" data-wow-delay="0.3s"><p>Age: <span>29 Years</span></p></li> -->
-										<li class="wow fadeInUp" data-wow-delay="0.45s">
-											<p>Adress: <span>Koforidua, Ghana</span></p>
-										</li>
-										<li class="wow fadeInUp" data-wow-delay="0.6s">
-											<p>Phone: <span>
-													<a href="tel:+233248429877">(+233) 24 842 9877</a></span></p>
-										</li>
-										<!-- <li class="wow fadeInUp" data-wow-delay="0.75s"><p>Skype: <span>Felicia.A</span></p></li> -->
-										<li class="wow fadeInUp" data-wow-delay="0.9s">
-											<p>Email: <span>
-													<a
-														href="mailto:favournwevo@gmail.com">favournwevo@gmail.com</a></span>
-											</p>
-										</li>
-										<li class="wow fadeInUp" data-wow-delay="1.05s">
-											<p>Telegram: <span>Available</span></p>
-										</li>
-									</ul>
-
-								</div>
-							</div>
-						</div>
-						<!-- /Info Items -->
-
-
-						<!-- Download CV Button -->
-						<div class="fn_cs_cv_btn">
-							<div class="container">
-								<span class="line top_hover"></span>
-								<span class="line bottom_hover"></span>
-								<span class="line top"></span>
-								<span class="line bottom"></span>
-								<a href="cv.pdf" download>
-									<span class="icon">
-										<img src="svg/inbox.svg" alt="" class="fn__svg" />
-										<img src="svg/arrow.svg" alt="" class="fn__svg arrow" />
-									</span>
-									<span>Download CV</span>
-								</a>
-							</div>
-						</div>
-						<!-- /Download CV Button -->
-
-
-						<!-- Tabs Shortcode -->
-						<div class="fn_cs_tabs">
-							<div class="container max880">
-								<div class="row">
-
-									<!-- Tab: Header -->
-									<div class="tab_header">
-										<ul>
-											<li class="active"><a href="#tab1">Experience</a></li>
-											<li><a href="#tab2">Education</a></li>
-											<li><a href="#tab3">Skills</a></li>
-										</ul>
-									</div>
-									<!-- /Tab: Header -->
-
-									<!-- Tab: Content -->
-									<div class="tab_content">
-
-										<!-- #1 tab content -->
-										<div id="tab1" class="tab_item active">
-
-											<!-- Boxed List -->
-											<div class="fn_cs_boxed_list">
-												<ul>
-													<li>
-														<div class="item">
-															<div class="item_top">
-																<h5>Rx HEALTH INFO SYSTEMS</h5>
-																<span>( 2023 — Today )</span>
-															</div>
-															<h3>Full-stack Developer</h3>
-															<p>
-																Developed and maintained web applications using PHP
-																Framework (Laravel) and Livewire with Alpine JS
-																programming languages.
-															</p>
-														</div>
-													</li>
-													<li>
-														<div class="item">
-															<div class="item_top">
-																<h5>FREELANCER</h5>
-																<span>( 2022 — 2023 )</span>
-															</div>
-															<h3>Full-stack Developer</h3>
-															<p>
-																Managed both back-end and front-end aspects of
-																development process.
-															</p>
-														</div>
-													</li>
-													<li>
-														<div class="item">
-															<div class="item_top">
-																<h5>ZELUS TECHNOLOGIES</h5>
-																<span>( 2021 — 2022 )</span>
-															</div>
-															<h3>Backend Developer</h3>
-															<p>
-																Created landing pages, dashboards and web applications
-																using PHP Framework (Laravel) and Livewire with Alpine
-																JS programming languages.
-															</p>
-														</div>
-													</li>
-												</ul>
-											</div>
-											<!-- /Boxed List -->
-
-										</div>
-										<!-- /#1 tab content -->
-
-										<!-- #2 tab content -->
-										<div id="tab2" class="tab_item">
-
-											<!-- Boxed List -->
-											<div class="fn_cs_boxed_list">
-												<ul>
-													<li>
-														<div class="item">
-															<div class="item_top">
-																<h5>VALLEY VIEW UNIVERSITY</h5>
-																<span>( 2021 — 2022 )</span>
-															</div>
-															<h3>BSC. COMPUTER SCIENCE</h3>
-															<p>
-																Continued the computer science program for a degree
-																certificate
-															</p>
-														</div>
-													</li>
-													<li>
-														<div class="item">
-															<div class="item_top">
-																<h5>KOFORIDUA TECHNICAL UNIVERSITY</h5>
-																<span>( 2016 — 2019 )</span>
-															</div>
-															<h3>HIGHER NATIONAL DIPLOMA (HND)</h3>
-															<p>
-																Did computer science for three years in KTU with real
-																work experiences.
-															</p>
-														</div>
-													</li>
-												</ul>
-											</div>
-											<!-- /Boxed List -->
-
-										</div>
-										<!-- /#2 tab content -->
-
-										<!-- #3 tab content -->
-										<div id="tab3" class="tab_item">
-
-											<!-- Progress Bar -->
-											<div class="fn_cs_progress_bar">
-
-												<div class="progress_item" data-value="92">
-													<div class="item_in">
-														<h3 class="progress_title">PHP & Framework (Laravel)</h3>
-														<span class="progress_percent"></span>
-														<div class="progress_bg"></div>
-													</div>
-												</div>
-
-												<div class="progress_item" data-value="95">
-													<div class="item_in">
-														<h3 class="progress_title">HTML5 &amp; CSS3</h3>
-														<span class="progress_percent"></span>
-														<div class="progress_bg"></div>
-													</div>
-												</div>
-
-												<div class="progress_item" data-value="85">
-													<div class="item_in">
-														<h3 class="progress_title">WordPress</h3>
-														<span class="progress_percent"></span>
-														<div class="progress_bg"></div>
-													</div>
-												</div>
-
-												<div class="progress_item" data-value="75">
-													<div class="item_in">
-														<h3 class="progress_title">MySQL Database Management</h3>
-														<span class="progress_percent"></span>
-														<div class="progress_bg"></div>
-													</div>
-												</div>
-
-											</div>
-											<!-- /Progress Bar -->
-
-											<!-- Description -->
-											<div class="fn_cs_desc">
-												<p>
-													A self-reliant, energetic and trustworthy graduate who is passionate
-													about working effectively to contribute to the success of my
-													employer. Provide high quality and cost effective offshore web and
-													software development services. Wide range of web and software
-													development services across the world.
-												</p>
-											</div>
-
-										</div>
-										<!-- /#2 tab content -->
-
-									</div>
-									<!-- /Tab: Content -->
-
-								</div>
-							</div>
-						</div>
-						<!-- /Tabs Shortcode -->
-
-					</section>
-					<!-- /Biography Section -->
-
-					<!-- Scroll to next section -->
-					<div class="fn__next_section">
-						<div class="container"><span></span></div>
-						<a href="#">
-							<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
-							<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-						</a>
-					</div>
-					<!-- /Scroll to next section -->
-
-					<!-- Portfolio Section -->
-					<section class="portfolio" id="portfolio">
-
-						<!-- Main Title -->
-						<div class="main_title center">
-							<div class="container max880">
-								<h3>Portfolio</h3>
-								<p>Now, I’m working on a professional, visually sophisticated and technologically
-									proficient, responsive and multi-functional Laravel Project KofTown MarketPlace. If
-									you are interested to work with me, click below button and contact with me right
-									now, so we can talk about your project.</p>
-								<div class="main_button">
-									<a href="#contact">If you are interested, Get in Touch With Me</a>
-								</div>
-							</div>
-						</div>
-						<!-- /Main Title -->
-
-						<!-- <div class="portfolio_list">
-						<div class="container">
-							<ul class="fn__masonry gallery_zoom">
-
-								<li class="masonry_in">
-									<div class="item">
-										<div class="title_holder">
-											<h3><a class="fn__link zoom" href="img/portfolio/1.jpg" data-title="Smashing Magazine Print">Smashing Magazine Print</a></h3>
-											<p>illustration, design</p>
-										</div>
-
-										<div class="img_holder">
-											<a class="zoom" href="img/portfolio/1.jpg" data-title="Smashing Magazine Print"></a>
-											<img src="img/thumb/square.jpg" alt="">
-											<div class="abs_img" data-bg-img="img/portfolio/1.jpg"></div>
-										</div>
-									</div>
-								</li>
-
-								<li class="masonry_in">
-									<div class="item">
-										<div class="title_holder">
-											<h3><a class="fn__link zoom" href="img/portfolio/2.jpg" data-title="Revolution Book">Revolution Book</a></h3>
-											<p>illustration, design</p>
-										</div>
-
-										<div class="img_holder">
-											<a class="zoom" href="img/portfolio/2.jpg" data-title="Revolution Book"></a>
-											<img src="img/thumb/square.jpg" alt="">
-											<div class="abs_img" data-bg-img="img/portfolio/2.jpg"></div>
-										</div>
-									</div>
-								</li>
-
-								<li class="masonry_in">
-									<div class="item">
-										<div class="title_holder">
-											<h3><a class="fn__link zoom" href="img/portfolio/3.jpg" data-title="Dreamers Logo">Dreamers Logo</a></h3>
-											<p>illustration, design</p>
-										</div>
-
-										<div class="img_holder">
-											<a class="zoom" href="img/portfolio/3.jpg" data-title="Dreamers Logo"></a>
-											<img src="img/thumb/square.jpg" alt="">
-											<div class="abs_img" data-bg-img="img/portfolio/3.jpg"></div>
-										</div>
-									</div>
-								</li>
-
-								<li class="masonry_in">
-									<div class="item">
-										<div class="title_holder">
-											<h3><a class="fn__link zoom" href="img/portfolio/4.jpg" data-title="Reductive Design">Reductive Design</a></h3>
-											<p>illustration, design</p>
-										</div>
-
-										<div class="img_holder">
-											<a class="zoom" href="img/portfolio/4.jpg" data-title="Reductive Design"></a>
-											<img src="img/thumb/square.jpg" alt="">
-											<div class="abs_img" data-bg-img="img/portfolio/4.jpg"></div>
-										</div>
-									</div>
-								</li>
-
-
-							</ul>
-						</div>
-					</div> -->
-
-
-					</section>
-					<!-- /Portfolio Section -->
-
-
-					<!-- Scroll to next section -->
-					<!-- <div class="fn__next_section">
-					<div class="container"><span></span></div>
-					<a href="#">
-						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
-						<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-					</a>
-				</div> -->
-					<!-- /Scroll to next section -->
-
-					<!-- Service Section -->
-					<!-- <section class="service" id="service"> -->
-
-					<!-- Main Title -->
-					<!-- <div class="main_title center">
-						<div class="container max880">
-							<h3>Services</h3>
-							<p>I help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers and growing overall sales. My only working rule is that I don't work through agencies, I prefer to communicate directly with clients.</p>
-						</div>
-					</div> -->
-					<!-- /Main Title -->
-
-					<!-- Boxed List -->
-					<!-- <div class="fn_cs_boxed_list modern">
-						<div class="container max1020">
-							<ul>
-								<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-									<div class="item">
-										<div class="badge">
-											<p>Starts From</p>
-											<h5>$500</h5>
-										</div>
-										<h3>Web &amp; Product Design</h3>
-										<p>From low-fidelity wireframing and prototyping to a final coded design. We don't just hand off static designs, but enjoy working directly in the browser (♥ CSS) as much as with design tools such a <a class="fn__link" href="#">Figma</a>. We use can also setup complete sites in <a class="fn__link" href="#">Statamic</a> and <a class="fn__link" href="#">Kirby</a> and work alongside front-end developers to provide a complete service.</p>
-									</div>
-								</li>
-								<li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-									<div class="item">
-										<div class="badge">
-											<p>Starts From</p>
-											<h5>$450</h5>
-										</div>
-										<h3>Brand Identity</h3>
-										<p>From a single logomark to <a class="fn__link" href="#">a full branding system</a>. A brand new logo may not be the answer for you, we strongly believe in refining and updating existing logos to increase effectiveness without losing brand equity.</p>
-									</div>
-								</li>
-								<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-									<div class="item">
-										<div class="badge">
-											<p>Starts From</p>
-											<h5>$200</h5>
-										</div>
-										<h3>Iconography</h3>
-										<p>This is a speciality of ours, and we have worked with Skype, Spotify and Dyson (to name just a few). The process of reducing an idea to it's simplest, but still recognisable form is joyous!</p>
-									</div>
-								</li>
-								<li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s">
-									<div class="item">
-										<div class="badge">
-											<p>Starts From</p>
-											<h5>$150</h5>
-										</div>
-										<h3>Print</h3>
-										<p>We come from a traditional print publishing background, starting in the last days of paste up artwork.</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-						
-					</div> -->
-					<!-- /Boxed List -->
-
-
-					<!-- </section> -->
-					<!-- /Service Section -->
-
-
-
-					<!-- Scroll to next section -->
-					<!-- <div class="fn__next_section">
-					<div class="container"><span></span></div>
-					<a href="#">
-						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
-						<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-					</a>
-				</div> -->
-					<!-- /Scroll to next section -->
-
-
-					<!-- Customer Section -->
-					<!-- <section class="customer" id="customer"> -->
-
-
-					<!-- Main Title -->
-					<!-- <div class="main_title center">
-						<div class="container max880">
-							<h3>Customers</h3>
-						</div>
-					</div> -->
-					<!-- /Main Title -->
-
-					<!-- <div class="container"> -->
-					<!-- Partners -->
-					<!-- <div class="fn_cs_partners">
-							<ul>
-								<li><a href="#"><img src="img/partners/1.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/2.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/3.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/4.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/5.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/6.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/7.png" alt="" /></a></li>
-								<li><a href="#"><img src="img/partners/8.png" alt="" /></a></li>
-							</ul>
-						</div> -->
-					<!-- /Partners -->
-
-					<!-- <div class="fn_cs_testimonials">
-							<div class="owl-carousel owl-theme">
-							
-							
-								<div class="item">
-									<div class="icon">
-										<img src="svg/quote.svg" alt="" class="fn__svg" />
-									</div>
-									<div class="title_holder">
-										<div class="desc">
-											<p>They really nailed it. This is one of the best themes I have seen in a long time. Very nice design with lots of customization available. Many of my clients have chosen this theme for their portfolio sites.</p>
-										</div>
-										<div class="name">
-											<h3>Albert Walker</h3>
-											<p>Freelancer &amp; Designer</p>
-										</div>
-									</div>
-								</div>
-							
-								<div class="item">
-									<div class="icon">
-										<img src="svg/quote.svg" alt="" class="fn__svg" />
-									</div>
-									<div class="title_holder">
-										<div class="desc">
-											<p>This was exactly what I needed for my portfolio, and it looks great. I had a couple issues that support helped troubleshoot both via email and on the comments, which definitely made it worth the price. I'm very pleased with this purchase.</p>
-										</div>
-										<div class="name">
-											<h3>Anna Barbera</h3>
-											<p>Photographer</p>
-										</div>
-									</div>
-								</div>
-							
-								<div class="item">
-									<div class="icon">
-										<img src="svg/quote.svg" alt="" class="fn__svg" />
-									</div>
-									<div class="title_holder">
-										<div class="desc">
-											<p>They really nailed it. This is one of the best themes I have seen in a long time. Very nice design with lots of customization available. Many of my clients have chosen this theme for their portfolio sites.</p>
-										</div>
-										<div class="name">
-											<h3>Dana Atkins</h3>
-											<p>Customer</p>
-										</div>
-									</div>
-								</div>
-								
-								
-							</div>
-								
-							<div class="my__nav">
-								<a href="#" class="prev"><img src="svg/right-arrow.svg" alt="" class="fn__svg" /></a>
-								<a href="#" class="next"><img src="svg/right-arrow.svg" alt="" class="fn__svg" /></a>
-							</div>
-						</div> -->
-					<!-- </div>
-				</section> -->
-					<!-- /Customer Section -->
-
-
-					<!-- Scroll to next section -->
-					<!-- <div class="fn__next_section">
-					<div class="container"><span></span></div>
-					<a href="#">
-						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
-						<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-					</a>
-				</div> -->
-					<!-- /Scroll to next section -->
-
-
-					<!-- Blog Section -->
-					<!-- <section class="blog" id="blog"> -->
-
-
-					<!-- Main Title -->
-					<!-- <div class="main_title center">
-						<div class="container max880">
-							<h3>News &amp; Tips</h3>
-						</div>
-					</div> -->
-					<!-- /Main Title -->
-
-
-					<!-- <div class="container"> -->
-					<!-- Blog List -->
-					<!-- <div class="blog_list">
-							<ul class="gallery_zoom">
-								<li>
-									<div class="item">
-										<div class="left_part">
-											<div class="img_holder">
-												<a class="zoom" href="img/blog/1.jpg"></a>
-												<img src="img/thumb/square.jpg" alt="" />
-												<div class="abs_img" data-bg-img="img/blog/1.jpg"></div>
-											</div>
-										</div>
-										<div class="right_part">
-											<div class="title">
-												<h3><a class="fn__link zoom" href="img/blog/1.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>
-												<p>September 25. 2021</p>
-											</div>
-											<div class="main_button">
-												<a class="zoom" href="img/blog/1.jpg">Continue Reading</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="item">
-										<div class="left_part">
-											<div class="img_holder">
-												<a class="zoom" href="img/blog/2.jpg"></a>
-												<img src="img/thumb/square.jpg" alt="" />
-												<div class="abs_img" data-bg-img="img/blog/2.jpg"></div>
-											</div>
-										</div>
-										<div class="right_part">
-											<div class="title">
-												<h3><a class="fn__link zoom" href="img/blog/2.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>
-												<p>September 25. 2021</p>
-											</div>
-											<div class="main_button">
-												<a class="zoom" href="img/blog/2.jpg">Continue Reading</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="be_animated">
-									<div class="item">
-										<div class="left_part">
-											<div class="img_holder">
-												<a class="zoom" href="img/blog/3.jpg"></a>
-												<img src="img/thumb/square.jpg" alt="" />
-												<div class="abs_img" data-bg-img="img/blog/3.jpg"></div>
-											</div>
-										</div>
-										<div class="right_part">
-											<div class="title">
-												<h3><a class="fn__link zoom" href="img/blog/3.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>
-												<p>September 25. 2021</p>
-											</div>
-											<div class="main_button">
-												<a class="zoom" href="img/blog/3.jpg">Continue Reading</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="be_animated">
-									<div class="item">
-										<div class="left_part">
-											<div class="img_holder">
-												<a class="zoom" href="img/blog/4.jpg"></a>
-												<img src="img/thumb/square.jpg" alt="" />
-												<div class="abs_img" data-bg-img="img/blog/4.jpg"></div>
-											</div>
-										</div>
-										<div class="right_part">
-											<div class="title">
-												<h3><a class="fn__link zoom" href="img/blog/4.jpg">What You Know About Design &amp; What You Don't Know About Design.</a></h3>
-												<p>September 25. 2021</p>
-											</div>
-											<div class="main_button">
-												<a class="zoom" href="img/blog/4.jpg">Continue Reading</a>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-							
-							<div class="clearfix"></div>
-							
-							<div class="load_more">
-								<a href="#" data-initial="Load More" data-loading="Loading..." data-done="Done" data-no="No more items found">
-									<span class="text">Load More</span>
-									<span class="icon"></span>
-								</a>
-							</div>
-							
-						</div> -->
-					<!-- /Blog List -->
-					<!-- </div>
-				</section> -->
-					<!-- /Blog Section -->
-
-
-					<!-- Scroll to next section -->
-					<div class="fn__next_section">
-						<div class="container"><span></span></div>
-						<a href="#">
-							<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
-							<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
-						</a>
-					</div>
-					<!-- /Scroll to next section -->
-
-
-					<!-- Contact Section -->
-					<section class="contact" id="contact">
-
-						<!-- Main Title -->
-						<div class="main_title center">
-							<div class="container max880">
-								<h3>Contact</h3>
-							</div>
-						</div>
-						<!-- /Main Title -->
-
-						<!-- Contact -->
-						<div class="rewall_fn_contact">
-							<div class="container max880">
-
-								<!-- Contact Form -->
-								<!-- <form class="contact_form" action="/" method="post" autocomplete="off" data-email="frenifyteam@gmail.com"> -->
-
-								<!--
-								 	Don't remove below code in avoid to work contact form properly.
-									You can chance dat-success value with your one. It will be used when user will try to contact via contact form and will get success message.
-								-->
-								<!-- <div class="success" data-success="Your message has been received, we will contact you soon."></div>
-								<div class="empty_notice"><span>Please Fill Required Fields!</span></div> -->
-								<!-- -->
-
-								<!-- <div class="items_wrap">
-									<div class="items">
-										<div class="item half">
-											<div class="input_wrapper">
-												<input id="name" type="text" />
-												<span class="moving_placeholder">Name *</span>
-											</div>
-										</div>
-										<div class="item half">
-											<div class="input_wrapper">
-												<input id="email" type="email" />
-												<span class="moving_placeholder">Email *</span>
-											</div>
-										</div>
-										<div class="item">
-											<div class="input_wrapper">
-												<input id="phone" type="phone" />
-												<span class="moving_placeholder">Phone</span>
-											</div>
-										</div>
-										<div class="item">
-											<div class="input_wrapper">
-												<textarea id="message"></textarea>
-												<span class="moving_placeholder">Message</span>
-											</div>
-										</div>
-										<div class="item">
-											<a id="send_message" href="#">Send Message</a>
-										</div>
-									</div>
-								</div>
-							</form> -->
-								<!-- /Contact Form -->
-
-
-								<!-- Contact Info -->
-								<div class="fn_cs_contact_info">
-									<p>Address</p>
-									<h3>Koforidua, Eastern Region, Ghana</h3>
-									<p>Phone</p>
-									<h3><a href="tel:+233248429877">(+233) 24-842-9877</a></h3>
-									<p><a class="fn__link" href="mailto:favournwevo@gmail.com">favournwevo@gmail.com</a>
-									</p>
-								</div>
-								<!-- /Contact Info -->
-
-
-							</div>
-						</div>
-						<!-- /Contact -->
-
-					</section>
-					<!-- /Contact Section -->
-
-
-				</div>
-			</div>
-			<!-- Main Content -->
-
-		</div>
-		<!-- /Wrapper -->
-
-	</div>
-	<!-- /Wrapper All -->
-
-
-
-	<!-- Scripts -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/wow.min.js"></script>
-	<script type="text/javascript" src="js/magnific-popup.js"></script>
-	<script type="text/javascript" src="js/onepage.js"></script>
-	<script type="text/javascript" src="js/owl-carousel.js"></script>
-	<script type="text/javascript" src="js/isotope.js"></script>
-	<script type="text/javascript" src="js/parallax.js"></script>
-	<script type="text/javascript" src="js/waypoints.js"></script>
-	<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
-	<script type="text/javascript" src="js/init.js"></script>
-	<!-- /Scripts -->
-
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-40 -left-24 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl"></div>
+    <div class="absolute top-96 -right-24 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl"></div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
+      <a href="#home" class="text-lg font-extrabold tracking-wide text-white">OMEGASL</a>
+      <ul class="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
+        <li><a href="#about" class="transition hover:text-brand-100">About</a></li>
+        <li><a href="#experience" class="transition hover:text-brand-100">Experience</a></li>
+        <li><a href="#portfolio" class="transition hover:text-brand-100">Portfolio</a></li>
+        <li><a href="#contact" class="transition hover:text-brand-100">Contact</a></li>
+      </ul>
+      <a href="cv.pdf" download class="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-100">Download CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-16 md:grid-cols-2 md:items-center md:px-8 md:pt-24">
+      <div>
+        <p class="mb-4 inline-block rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-100">Available for work</p>
+        <h1 class="text-4xl font-extrabold leading-tight text-white md:text-6xl">Favour Nwevo</h1>
+        <p class="mt-4 text-xl font-semibold text-brand-100 md:text-2xl">Full-Stack Developer</p>
+        <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">Full-Stack Developer based in Ghana, building scalable products across healthcare, commerce, and business operations with Laravel, Livewire, Alpine.js, React.js, and Tailwind CSS.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">Hire Me</a>
+          <a href="#portfolio" class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-brand-100 hover:text-brand-100">View Portfolio</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-brand-500/40 to-sky-400/30 blur-xl"></div>
+        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-3 shadow-2xl shadow-brand-900/30">
+          <img src="img/mine/me.jpg" alt="Favour Nwevo" class="h-[420px] w-full rounded-2xl object-cover object-center" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+      <div class="grid gap-6 md:grid-cols-4">
+        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:col-span-2">
+          <h2 class="text-2xl font-bold text-white">Professional Summary</h2>
+          <p class="mt-4 leading-relaxed text-slate-300">I design and build scalable digital systems that solve real business problems. My focus is clean architecture, practical automation, and reliable user-facing products across healthcare, commerce, and enterprise workflows.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <p class="text-sm uppercase tracking-wider text-brand-100">Location</p>
+          <p class="mt-2 text-lg font-semibold text-white">Koforidua, Ghana</p>
+          <p class="mt-4 text-sm uppercase tracking-wider text-brand-100">Email</p>
+          <a class="mt-2 block text-lg font-semibold text-white hover:text-brand-100" href="mailto:favournwevo@gmail.com">favournwevo@gmail.com</a>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <p class="text-sm uppercase tracking-wider text-brand-100">Phone</p>
+          <a class="mt-2 block text-lg font-semibold text-white hover:text-brand-100" href="tel:+233248429877">(+233) 24 842 9877</a>
+          <p class="mt-4 text-sm uppercase tracking-wider text-brand-100">Birthday</p>
+          <p class="mt-2 text-lg font-semibold text-white">June 8, 1998</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Career</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-white">Experience & Education</h2>
+        </div>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-2">
+        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <h3 class="text-xl font-bold text-white">Experience</h3>
+          <div class="mt-6 space-y-5">
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">Jul 2023 - Present</p>
+              <h4 class="mt-1 font-bold text-white">Full Stack Software Developer · RX Health Info Systems</h4>
+              <p class="mt-2 text-sm text-slate-300">Developing and maintaining Laravel and Livewire applications with Alpine.js for production healthcare workflows.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">Jul 2025 - Feb 2026</p>
+              <h4 class="mt-1 font-bold text-white">ReactJS Developer · WAAWOLO TECHNOLOGIES</h4>
+              <p class="mt-2 text-sm text-slate-300">Built responsive commerce interfaces and frontend application flows with React.js and Tailwind CSS.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">Nov 2023 - Sep 2025</p>
+              <h4 class="mt-1 font-bold text-white">Laravel Developer · AppNet Consult LTD</h4>
+              <p class="mt-2 text-sm text-slate-300">Implemented hostel reservation, booking, payment, and communication workflows for tertiary institutions in Ghana.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">Apr 2025 - Jul 2025</p>
+              <h4 class="mt-1 font-bold text-white">Full Stack Developer · Microma Services</h4>
+              <p class="mt-2 text-sm text-slate-300">Delivered end-to-end web features across frontend interfaces, APIs, reporting, and business automation.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">Mar 2023 - Jun 2023</p>
+              <h4 class="mt-1 font-bold text-white">Laravel Developer · Zelus Technologies Limited</h4>
+              <p class="mt-2 text-sm text-slate-300">Built dashboards, landing pages, and web applications using Laravel, Livewire, and Alpine.js.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">Aug 2021 - Mar 2023</p>
+              <h4 class="mt-1 font-bold text-white">Full Stack Engineer · LinkedIn</h4>
+              <p class="mt-2 text-sm text-slate-300">Contributed to full-stack product delivery with a focus on maintainable architecture and production reliability.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <h3 class="text-xl font-bold text-white">Education & Skills</h3>
+          <div class="mt-6 space-y-5">
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">2020 - 2023</p>
+              <h4 class="mt-1 font-bold text-white">BSc. Computer Science · Valley View University</h4>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-900 p-4">
+              <p class="text-sm text-brand-100">2015 - 2019</p>
+              <h4 class="mt-1 font-bold text-white">HND Computer Science · Koforidua Technical University</h4>
+            </div>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">Laravel / Livewire</span><span class="text-brand-100">93%</span></div>
+                <div class="h-2 rounded bg-slate-800"><div class="h-2 rounded bg-brand-500" style="width:93%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">React.js</span><span class="text-brand-100">88%</span></div>
+                <div class="h-2 rounded bg-slate-800"><div class="h-2 rounded bg-brand-500" style="width:88%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">Tailwind CSS</span><span class="text-brand-100">90%</span></div>
+                <div class="h-2 rounded bg-slate-800"><div class="h-2 rounded bg-brand-500" style="width:90%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">Alpine.js</span><span class="text-brand-100">86%</span></div>
+                <div class="h-2 rounded bg-slate-800"><div class="h-2 rounded bg-brand-500" style="width:86%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-sm"><span class="text-slate-200">MySQL</span><span class="text-brand-100">84%</span></div>
+                <div class="h-2 rounded bg-slate-800"><div class="h-2 rounded bg-brand-500" style="width:84%"></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Selected Work</p>
+        <h2 class="mt-2 text-3xl font-extrabold text-white">Featured Projects</h2>
+        <p class="mt-3 max-w-3xl text-slate-300">Selected projects across commerce, education technology, and healthcare systems, focused on scalable architecture and practical user workflows.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+          <img src="img/portfolio/1.jpg" alt="KofTown Marketplace" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Featured Project</p>
+            <h3 class="mt-2 text-xl font-bold text-white">WYNX - Multi Vendor Commerce Platform</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Associated with WAAWOLO TECHNOLOGIES. A website builder and multi-vendor e-commerce platform with business verification, store management, and seamless shopping workflows.</p>
+            <p class="mt-3 text-xs text-slate-400">Built with React.js, JavaScript, Tailwind CSS</p>
+          </div>
+        </article>
+        <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+          <img src="img/portfolio/2.jpg" alt="Student Room Book" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Core Services</p>
+            <h3 class="mt-2 text-xl font-bold text-white">Student Room Book (SRB)</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Associated with AppNet Consult LTD. A hostel management system for tertiary institutions in Ghana covering reservations, bookings, payments, and peer-to-peer communication.</p>
+            <p class="mt-3 text-xs text-slate-400">Built with Laravel, Livewire, Alpine.js, Bootstrap</p>
+          </div>
+        </article>
+        <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+          <img src="img/portfolio/3.jpg" alt="Healthcare Operations Platform" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Platform Engineering</p>
+            <h3 class="mt-2 text-xl font-bold text-white">Healthcare Operations Platform</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Associated with RX Health Info Systems. Built modules for electronic medical records, insurance workflows, reporting, and operations automation.</p>
+            <p class="mt-3 text-xs text-slate-400">Built with Laravel, Livewire, Alpine.js, MySQL</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 lg:col-span-2">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Let us work together</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-white">Contact</h2>
+          <p class="mt-4 max-w-2xl text-slate-300">Interested in building a reliable web product or improving an existing one? Reach out and let us discuss your project goals.</p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="mailto:favournwevo@gmail.com" class="rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-100">Email Me</a>
+            <a href="tel:+233248429877" class="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-brand-100 hover:text-brand-100">Call Me</a>
+            <a href="cv.pdf" download class="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-brand-100 hover:text-brand-100">Download CV</a>
+          </div>
+        </article>
+
+        <aside class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+          <h3 class="text-lg font-bold text-white">Social Links</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li><a class="transition hover:text-brand-100" target="_blank" rel="noopener noreferrer" href="https://twitter.com/FavourNwevo">Twitter</a></li>
+            <li><a class="transition hover:text-brand-100" target="_blank" rel="noopener noreferrer" href="https://facebook.com/favour.ogbonnaya.950">Facebook</a></li>
+            <li><a class="transition hover:text-brand-100" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ogbonnayafavour/">Instagram</a></li>
+            <li><a class="transition hover:text-brand-100" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/favour-nwevo-055017150/">LinkedIn</a></li>
+            <li><a class="transition hover:text-brand-100" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCKS9rZyS3TjkcqoNSvlt1-w">YouTube</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-5 text-sm text-slate-400 md:flex-row md:items-center md:px-8">
+      <p>© <span id="year"></span> OmegaSL. All rights reserved.</p>
+      <p>Built with Tailwind CSS.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
