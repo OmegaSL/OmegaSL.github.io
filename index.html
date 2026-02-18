@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -33,12 +33,71 @@
       }
     };
   </script>
+  <style>
+    :root {
+      --line: rgba(255, 255, 255, 0.08);
+    }
+
+    .mesh-bg {
+      background-image:
+        linear-gradient(to right, var(--line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px) scale(0.99);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .project-card {
+      transform-style: preserve-3d;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .project-card:hover {
+      border-color: rgba(207, 250, 254, 0.5);
+      box-shadow: 0 24px 60px rgba(6, 182, 212, 0.15);
+    }
+
+    .shimmer::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, transparent 40%, rgba(255, 255, 255, 0.18) 50%, transparent 60%);
+      transform: translateX(-120%);
+      animation: shimmer 6s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translateX(-120%);
+      }
+
+      30%,
+      100% {
+        transform: translateX(140%);
+      }
+    }
+  </style>
 </head>
 
-<body class="bg-slate-950 text-slate-100 antialiased">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500/30">
+  <div class="fixed left-0 top-0 z-[60] h-1 w-full bg-transparent">
+    <div id="scroll-progress" class="h-full w-0 bg-gradient-to-r from-brand-100 via-brand-500 to-sky-400"></div>
+  </div>
   <div class="absolute inset-0 -z-10 overflow-hidden">
     <div class="absolute -top-40 -left-24 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl"></div>
     <div class="absolute top-96 -right-24 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl"></div>
+    <div class="mesh-bg absolute inset-0"></div>
   </div>
 
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
@@ -50,16 +109,31 @@
         <li><a href="#portfolio" class="transition hover:text-brand-100">Portfolio</a></li>
         <li><a href="#contact" class="transition hover:text-brand-100">Contact</a></li>
       </ul>
-      <a href="cv.pdf" download
-        class="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-100">Download
-        CV</a>
+      <div class="flex items-center gap-3">
+        <a href="cv.pdf" download
+          class="hidden rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-100 md:inline-flex">Download
+          CV</a>
+        <button id="menu-toggle" aria-label="Open menu"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 text-white md:hidden">
+          <span class="text-lg leading-none">☰</span>
+        </button>
+      </div>
     </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950/95 px-5 py-4 md:hidden">
+      <ul class="space-y-3 text-sm font-semibold text-slate-200">
+        <li><a href="#about" class="mobile-link block">About</a></li>
+        <li><a href="#experience" class="mobile-link block">Experience</a></li>
+        <li><a href="#portfolio" class="mobile-link block">Portfolio</a></li>
+        <li><a href="#contact" class="mobile-link block">Contact</a></li>
+        <li><a href="cv.pdf" download class="mobile-link block text-brand-100">Download CV</a></li>
+      </ul>
+    </div>
   </header>
 
   <main>
     <section id="home"
       class="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-16 md:grid-cols-2 md:items-center md:px-8 md:pt-24">
-      <div>
+      <div class="reveal">
         <p
           class="mb-4 inline-block rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-100">
           Available for work</p>
@@ -76,18 +150,32 @@
             class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-brand-100 hover:text-brand-100">View
             Portfolio</a>
         </div>
+        <div class="mt-8 grid grid-cols-3 gap-3">
+          <div class="rounded-xl border border-white/10 bg-slate-900/70 p-3">
+            <p class="text-xl font-extrabold text-white"><span class="count" data-target="5">0</span>+</p>
+            <p class="text-xs uppercase tracking-wider text-slate-300">Years Building</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-slate-900/70 p-3">
+            <p class="text-xl font-extrabold text-white"><span class="count" data-target="3">0</span>+</p>
+            <p class="text-xs uppercase tracking-wider text-slate-300">Core Domains</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-slate-900/70 p-3">
+            <p class="text-xl font-extrabold text-white"><span class="count" data-target="6">0</span>+</p>
+            <p class="text-xs uppercase tracking-wider text-slate-300">Major Roles</p>
+          </div>
+        </div>
       </div>
-      <div class="relative">
+      <div class="relative reveal">
         <div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-brand-500/40 to-sky-400/30 blur-xl"></div>
         <div
-          class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-3 shadow-2xl shadow-brand-900/30">
+          class="shimmer relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-3 shadow-2xl shadow-brand-900/30">
           <img src="img/mine/me.webp" alt="Favour Nwevo"
             class="h-[420px] w-full rounded-2xl object-cover object-top md:h-[460px]" />
         </div>
       </div>
     </section>
 
-    <section id="about" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+    <section id="about" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
       <div class="grid gap-6 md:grid-cols-4">
         <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:col-span-2">
           <h2 class="text-2xl font-bold text-white">Professional Summary</h2>
@@ -112,7 +200,7 @@
       </div>
     </section>
 
-    <section id="experience" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+    <section id="experience" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
       <div class="mb-8 flex items-end justify-between gap-4">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Career</p>
@@ -216,7 +304,7 @@
       </div>
     </section>
 
-    <section id="portfolio" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+    <section id="portfolio" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Selected Work</p>
         <h2 class="mt-2 text-3xl font-extrabold text-white">Featured Projects</h2>
@@ -225,7 +313,7 @@
       </div>
 
       <div class="grid gap-6 md:grid-cols-3">
-        <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+        <article class="project-card overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
           <img src="img/portfolio/healthcare-operations-platform.png" alt="Healthcare Operations Platform"
             class="h-56 w-full object-cover" />
           <div class="p-6">
@@ -236,7 +324,7 @@
             <p class="mt-3 text-xs text-slate-400">Built with Laravel, Livewire, Alpine.js, MySQL</p>
           </div>
         </article>
-        <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+        <article class="project-card overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
           <img src="img/portfolio/student-room-book.png" alt="Student Room Book" class="h-56 w-full object-cover" />
           <div class="p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Core Services</p>
@@ -247,7 +335,7 @@
             <p class="mt-3 text-xs text-slate-400">Built with Laravel, Livewire, Alpine.js, Bootstrap</p>
           </div>
         </article>
-        <article class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
+        <article class="project-card overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
           <img src="img/portfolio/wynx-multi-vendor.png" alt="WYNX - Multi Vendor Commerce Platform"
             class="h-56 w-full object-cover" />
           <div class="p-6">
@@ -262,7 +350,7 @@
       </div>
     </section>
 
-    <section id="contact" class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
+    <section id="contact" class="mx-auto max-w-6xl px-5 pb-20 md:px-8 reveal">
       <div class="grid gap-6 lg:grid-cols-3">
         <article class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 lg:col-span-2">
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-100">Let us work together</p>
@@ -312,6 +400,90 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    document.querySelectorAll(".mobile-link").forEach((link) => {
+      link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
+
+    const progress = document.getElementById("scroll-progress");
+    const updateScrollProgress = () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progress.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    updateScrollProgress();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.target || 0);
+        const duration = 1200;
+        const start = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - start) / duration, 1);
+          el.textContent = Math.floor(target * p);
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        countObserver.unobserve(el);
+      });
+    }, { threshold: 0.7 });
+    document.querySelectorAll(".count").forEach((el) => countObserver.observe(el));
+
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        if (window.innerWidth < 768) return;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rx = ((y / rect.height) - 0.5) * -8;
+        const ry = ((x / rect.width) - 0.5) * 10;
+        card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0)";
+      });
+    });
+
+    const navLinks = Array.from(document.querySelectorAll("a[href^='#']")).filter((a) => a.getAttribute("href").length > 1);
+    const sections = ["about", "experience", "portfolio", "contact"].map((id) => document.getElementById(id));
+    const setActiveLink = () => {
+      let current = "about";
+      const y = window.scrollY + 140;
+      sections.forEach((section) => {
+        if (section && y >= section.offsetTop) current = section.id;
+      });
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href === `#${current}`) {
+          link.classList.add("text-brand-100");
+        } else {
+          link.classList.remove("text-brand-100");
+        }
+      });
+    };
+    window.addEventListener("scroll", setActiveLink, { passive: true });
+    setActiveLink();
   </script>
 </body>
 
