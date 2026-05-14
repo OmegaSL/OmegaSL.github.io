@@ -108,12 +108,18 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       .reveal,
       .project-card,
       .shimmer::after {
         transition: none !important;
         animation: none !important;
       }
+    }
+
+    .portfolio-preview-trigger:focus-visible {
+      outline: 2px solid rgb(207 250 254);
+      outline-offset: 2px;
     }
   </style>
 </head>
@@ -128,7 +134,8 @@
     <div class="mesh-bg absolute inset-0"></div>
   </div>
 
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 shadow-lg shadow-slate-950/40 backdrop-blur-xl">
+  <header
+    class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 shadow-lg shadow-slate-950/40 backdrop-blur-xl">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
       <a href="#home" class="text-lg font-extrabold tracking-[0.2em] text-white">OMEGASL</a>
       <ul class="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
@@ -165,7 +172,9 @@
         <p
           class="mb-4 inline-block rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-100">
           Available for work</p>
-        <h1 class="section-title text-5xl font-extrabold leading-[1.02] text-white md:text-7xl">Favour <span class="bg-gradient-to-r from-brand-100 via-white to-brand-100 bg-clip-text text-transparent">Nwevo</span></h1>
+        <h1 class="section-title text-5xl font-extrabold leading-[1.02] text-white md:text-7xl">Favour <span
+            class="bg-gradient-to-r from-brand-100 via-white to-brand-100 bg-clip-text text-transparent">Nwevo</span>
+        </h1>
         <p class="mt-4 text-xl font-semibold text-brand-100 md:text-2xl">Full-Stack Developer</p>
         <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">Full-Stack Developer based in
           Ghana, building scalable products across healthcare, commerce, and business operations with Laravel, Livewire,
@@ -342,8 +351,12 @@
 
       <div class="grid gap-6 md:grid-cols-3">
         <article class="project-card glass-card overflow-hidden rounded-2xl">
-          <img src="img/portfolio/healthcare-operations-platform.png" alt="Healthcare Operations Platform"
-            class="h-56 w-full object-cover" />
+          <button type="button"
+            class="portfolio-preview-trigger group relative block w-full cursor-zoom-in border-0 bg-transparent p-0 text-left"
+            aria-label="Expand Healthcare Operations Platform screenshot">
+            <img src="img/portfolio/healthcare-operations-platform.png" alt="Healthcare Operations Platform"
+              class="h-56 w-full object-cover transition duration-200 group-hover:brightness-110" />
+          </button>
           <div class="p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Platform Engineering</p>
             <h3 class="mt-2 text-xl font-bold text-white">Healthcare Operations Platform</h3>
@@ -353,7 +366,12 @@
           </div>
         </article>
         <article class="project-card glass-card overflow-hidden rounded-2xl">
-          <img src="img/portfolio/student-room-book.png" alt="Student Room Book" class="h-56 w-full object-cover" />
+          <button type="button"
+            class="portfolio-preview-trigger group relative block w-full cursor-zoom-in border-0 bg-transparent p-0 text-left"
+            aria-label="Expand Student Room Book screenshot">
+            <img src="img/portfolio/student-room-book.png" alt="Student Room Book"
+              class="h-56 w-full object-cover transition duration-200 group-hover:brightness-110" />
+          </button>
           <div class="p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Core Services</p>
             <h3 class="mt-2 text-xl font-bold text-white">Student Room Book (SRB)</h3>
@@ -364,8 +382,12 @@
           </div>
         </article>
         <article class="project-card glass-card overflow-hidden rounded-2xl">
-          <img src="img/portfolio/wynx-multi-vendor.png" alt="WYNX - Multi Vendor Commerce Platform"
-            class="h-56 w-full object-cover" />
+          <button type="button"
+            class="portfolio-preview-trigger group relative block w-full cursor-zoom-in border-0 bg-transparent p-0 text-left"
+            aria-label="Expand WYNX Multi Vendor Commerce Platform screenshot">
+            <img src="img/portfolio/wynx-multi-vendor.png" alt="WYNX - Multi Vendor Commerce Platform"
+              class="h-56 w-full object-cover transition duration-200 group-hover:brightness-110" />
+          </button>
           <div class="p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Featured Project</p>
             <h3 class="mt-2 text-xl font-bold text-white">WYNX - Multi Vendor Commerce Platform</h3>
@@ -430,6 +452,21 @@
     class="pointer-events-none fixed bottom-6 right-6 z-[70] inline-flex h-12 w-12 translate-y-3 items-center justify-center rounded-full border border-white/20 bg-slate-900/90 text-white opacity-0 shadow-xl shadow-slate-950/50 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-brand-100 hover:text-brand-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
     <span class="text-xl leading-none">↑</span>
   </button>
+
+  <div id="image-lightbox"
+    class="fixed inset-0 z-[80] hidden items-center justify-center bg-slate-950/90 p-4 backdrop-blur-md"
+    role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <button type="button" id="lightbox-backdrop"
+      class="absolute inset-0 cursor-zoom-out border-0 bg-transparent p-0" aria-label="Close image preview"></button>
+    <div class="relative z-10 max-h-[min(90vh,100%)] max-w-[min(96vw,100%)]">
+      <p id="lightbox-title" class="sr-only">Expanded project image</p>
+      <img id="lightbox-image" src="" alt=""
+        class="max-h-[90vh] max-w-full rounded-xl border border-white/15 object-contain shadow-2xl shadow-black/50" />
+      <button type="button" id="lightbox-close"
+        class="absolute -right-1 -top-1 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-900/95 text-lg font-bold text-white shadow-lg transition hover:border-brand-100 hover:text-brand-100 focus:outline-none focus:ring-2 focus:ring-brand-500 md:-right-3 md:-top-3"
+        aria-label="Close">×</button>
+    </div>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -526,6 +563,59 @@
     };
     window.addEventListener("scroll", setActiveLink, { passive: true });
     setActiveLink();
+
+    const imageLightbox = document.getElementById("image-lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.getElementById("lightbox-close");
+    const lightboxBackdrop = document.getElementById("lightbox-backdrop");
+    let lightboxLastFocus = null;
+
+    const openImageLightbox = (img) => {
+      if (!imageLightbox || !lightboxImage || !img) return;
+      lightboxLastFocus = document.activeElement;
+      lightboxImage.src = img.currentSrc || img.src;
+      lightboxImage.alt = img.alt || "";
+      imageLightbox.classList.remove("hidden");
+      imageLightbox.classList.add("flex");
+      document.body.style.overflow = "hidden";
+      lightboxClose?.focus();
+    };
+
+    const closeImageLightbox = () => {
+      if (!imageLightbox || !lightboxImage) return;
+      imageLightbox.classList.add("hidden");
+      imageLightbox.classList.remove("flex");
+      document.body.style.overflow = "";
+      lightboxImage.removeAttribute("src");
+      lightboxImage.alt = "";
+      if (lightboxLastFocus && typeof lightboxLastFocus.focus === "function") {
+        lightboxLastFocus.focus();
+      }
+      lightboxLastFocus = null;
+    };
+
+    const isLightboxOpen = () =>
+      imageLightbox && !imageLightbox.classList.contains("hidden");
+
+    document.querySelectorAll(".portfolio-preview-trigger").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const img = btn.querySelector("img");
+        openImageLightbox(img);
+      });
+    });
+
+    lightboxClose?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeImageLightbox();
+    });
+    lightboxBackdrop?.addEventListener("click", closeImageLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      if (!isLightboxOpen()) return;
+      closeImageLightbox();
+    });
   </script>
 </body>
 
