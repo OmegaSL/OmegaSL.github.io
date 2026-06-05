@@ -1,0 +1,23 @@
+{
+  "name": "Favour Nwevo | OmegaSL Portfolio",
+  "short_name": "OmegaSL",
+  "description": "Full-Stack Developer portfolio — Laravel, Livewire, React.js, Tailwind CSS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
